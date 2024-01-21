@@ -1,140 +1,307 @@
-import time, os, random
+import os
+import time
+import random
 
-print("\033[31mKereta Jakarta Bandung - Whoosh 🚄\033[0m")
-print()
-print("Selamat Datang dalam KCIC WHOOSH INDONESIA")
-
-time.sleep(3)
-os.system("clear")
-print("\033[34m🎫 Registration 🎫 \033[0m")
-print()
-kode = input("Masukkan Lokasi Kota Anda ")
-while True:
-  if kode == "Bandung" or kode == "bandung":
-    print("Bandung")
-    break
-  elif kode == "Jakarta" or kode == "jakarta":
-    print("Jakarta")
-    break
-  else:
-    print("Kota tidak dikenal")
-    kode = input("Masukkan Lokasi Anda : ")
-    continue
-
-print("   ")
-nama = input("Masukkan nama penumpang ")
-pswd = input("Masukkan NIK Anda ")
-
-while pswd != "123456":
-  print("NIK Salah/Tidak Terdaftar, mohon ulangi NIK")
-  pswd = input("> ")
+#subrutin untuk memesan tiket
+def pesan():
+  os.system("clear")
+  print("\033[34m🎫 Registration 🎫 \033[0m")
   print()
+  user_inpt = input("Masukkan Lokasi Kota Anda ").strip().lower()
+  while True:
+    if user_inpt == "bandung":
+      print("Bandung")
+      break
+    elif user_inpt == "jakarta":
+      print("Jakarta")
+      break
+    else:
+      print("Kota tidak dikenal")
+      inpt = input("Masukkan Lokasi Anda : ")
+      continue
 
-tujuanawal = input("Masukkan Stasiun keberangkatan ")
-tujuanakhir = input("Masukkan Stasiun tujuan ")
-jumlahtiket = int(input("Masukkan jumlah penumpang (Tidak Termasuk Anda) "))
+  print("   ")
+  nama = input("Masukkan nama penumpang ")
+  pswd = input("Masukkan NIK Anda ")
 
-penumpanglain = []
-for i in range(jumlahtiket):
-  penumpanglain.append(input("Input Penumpang : "))
-print()
-print("Data Penumpang Lengkap")
-print(penumpanglain)
-
-
-def kelas():
-  print()
-  print("Pilih Jenis Kelas:")
-  print("""
-  0. Ekonomi - 100.000/Orang
-  1. Ekonomi Premium - 150.000/Orang
-  2. Eksekutif - 200.000/Orang
-  3. Bussiness Class - 300.000/Orang
-  4. First Class - 1.000.000/Orang
-  5. Compartment Suite - 800.000/Orang
-  """)
-  print()
-kelas()
-kls = int(input("Pilih Jenis Kelas"))
-
-print("   ")
-print("Jenis Keberangkatan")
-print("1. Pulang Pergi")
-print("2. Pergi")
-keberangkatan = input("Pilih jenis keberangkatan: ")
-
-if keberangkatan == "1":
-  print("Pulang Pergi")
-  tanggalbrkt = input("Masukkan tanggal keberangkatan ")
-  tanggalplg = input("Masukkan tanggal pulang ")
-  print("Data Terupdate")
-  kelas()
-  print("\033[32m")
-  print("--------------------------")
-  print("Rincian Pemesanan")
-  print("Tiket Pemesanan a.n", nama)
-  print("Dari Stasiun ", tujuanawal)
-  print("Menuju ke Stasiun", tujuanakhir)
-  print("akan berangkat pada tanggal", tanggalbrkt, "dan pulang pada tanggal",
-        tanggalplg, "\033[0m")
-
-elif keberangkatan == "2":
-  print("Pergi")
-  tanggalbrkt = input("Masukkan tanggal keberangkatan ")
-  print("Data Terupdate")
-  kelas()
-  print("\033[32m")
-  print("-------------------------")
-  print("Rincian Pemesanan")
-  print("Tiket Pemesanan a.n", nama)
-  print("Dari Stasiun ", tujuanawal)
-  print("Menuju ke Stasiun", tujuanakhir)
-  print("Akan berangkat pada tanggal", tanggalbrkt)
-  print("\033[0m")
-
-else:
-  print("Pilihan tidak tersedia, mohon ulangi data")
-
-print()
-print("-------------------------")
-cash = input("~Lanjutkan Pembayaran ? (Y/N) ")
-if cash == "Y":
-  print("""
-  Total transaksi sebesar Rp. 5.000.000,00
-  Pembayaran transfer a.n Whoosh Indonesia
-  No. Rek 097656854467846755
-  """)
-elif cash == "N":
-  print("Silahkan Membayar di Kounter")
-else:
-  print("error")
-
-print("    ")
-print("---------------‐-------------")
-print("Kode Pemesanan Anda: GA685JLP976")
-print("-----------------------------")
-print("Terimakasih atas kepercayaan anda menggunakan Jasa Kereta Indonesia")
-print("Semoga selamat sampai tujuan")
-print("     ")
-cetak = input("Cetak Borading Pass ? (Y/N) ")
-if cetak == "Y":
-  kode = input("Masukkan Kode Pemesanan ")
-  while kode != "GA685JLP976":
-    print("Kode tidak ditemukan.")
-    kode = input("Ulangi Kode: ")
+  while pswd != "123456":
+    print("NIK Salah/Tidak Terdaftar, mohon ulangi NIK")
+    pswd = input("> ")
     print()
-  print("Tunggu Sebentar....")
-else:
-  print("Terimakasih atas kepercayaan anda menggunakan Jasa Kereta Indonesia ")
+  os.system("clear")
+  tujuanawal = input("Masukkan Stasiun keberangkatan ")
+  tujuanakhir = input("Masukkan Stasiun tujuan ")
+  jumlahtiket = int(input("Masukkan jumlah penumpang (Tidak Termasuk Anda) "))
 
-print()
-print("1. HELP")
-print("2. ERROR")
-print("3. DTBSE")
-input = input("Stasion Costumer Center ")
-if input == "1":
-  print("Please Wait. The officers will be here in a moment ")
-elif input == "2":
-  print("ERR CODE: 98557F6YG7")
-elif input == "3":
-  print("DTBSE CODE : 567NGY6TV")
+  penumpanglain = []
+  for i in range(jumlahtiket):
+    penumpanglain.append(input("Input Penumpang : "))
+  print()
+  print("Data Penumpang Lengkap")
+  print(penumpanglain)
+  os.system("clear")
+  def kelas():
+    print()
+    print("Pilih Jenis Kelas:")
+    print("""
+    0. Ekonomi - 100.000/Orang
+    1. Ekonomi Premium - 150.000/Orang
+    2. Eksekutif - 200.000/Orang
+    3. Bussiness Class - 300.000/Orang
+    4. First Class - 1.000.000/Orang
+    5. Compartment Suite - 800.000/Orang
+    """)
+    print()
+
+  kelas()
+  kls = int(input("Pilih Jenis Kelas "))
+  os.system("clear")
+  print("   ")
+  print("Jenis Keberangkatan")
+  print("1. Pulang Pergi")
+  print("2. Pergi")
+  keberangkatan = input("Pilih jenis keberangkatan: ")
+
+  if keberangkatan == "1":
+    print("Pulang Pergi")
+    tanggalbrkt = input("Masukkan tanggal keberangkatan ")
+    tanggalplg = input("Masukkan tanggal pulang ")
+    print("Data Terupdate")
+    os.system("clear")
+    print("\033[32m")
+    print("--------------------------")
+    print("-Rincian Pemesanan-\n")
+    print("Tiket Pemesanan a.n", nama)
+    print("Dari Stasiun ", tujuanawal)
+    print("Menuju ke Stasiun", tujuanakhir)
+    print("akan berangkat pada tanggal", tanggalbrkt,
+          "dan pulang pada tanggal", tanggalplg, "\033[0m")
+
+  elif keberangkatan == "2":
+    print("Pergi")
+    tanggalbrkt = input("Masukkan tanggal keberangkatan ")
+    print("Data Terupdate")
+    os.system("clear")
+    print("\033[32m")
+    print("-------------------------")
+    print("-Rincian Pemesanan-\n")
+    print("Tiket Pemesanan a.n", nama)
+    print("Dari Stasiun ", tujuanawal)
+    print("Menuju ke Stasiun", tujuanakhir)
+    print("Akan berangkat pada tanggal", tanggalbrkt)
+    print("\033[0m")
+
+  else:
+    print("Pilihan tidak tersedia, mohon ulangi data")
+
+  print()
+  print("-------------------------")
+  cash = input("~Lanjutkan Pembayaran ? (Y/N) ")
+  if cash == "Y":
+    print("""
+    Total transaksi sebesar Rp. 5.000.000,00
+    Pembayaran transfer a.n Whoosh Indonesia
+    No. Rek 097656854467846755
+    """)
+  elif cash == "N":
+    print("Silahkan Membayar di Kounter")
+  else:
+    print("error")
+
+  print("    ")
+  print("---------------‐-------------")
+  print("Kode Pemesanan Anda: GA685JLP976")
+  print("-----------------------------")
+  print("Terimakasih atas kepercayaan anda menggunakan Jasa Kereta Indonesia")
+  print("Semoga selamat sampai tujuan")
+  print("     ")
+  cetak = input("Cetak Borading Pass ? (Y/N) ")
+  if cetak == "Y":
+    kode = input("Masukkan Kode Pemesanan ")
+    while kode != "GAAUL":
+      print("Kode tidak ditemukan.")
+      kode = input("Ulangi Kode: ")
+      print()
+    print("Tunggu Sebentar....")
+  else:
+    print(
+        "Terimakasih atas kepercayaan anda menggunakan Jasa Kereta Indonesia ")
+
+  print()
+  while True:
+    print("1. KELUAR")
+    print("2. BANTUAN")
+    user_input = input("> ")
+    if user_input.strip() == "1":
+      print("Tunggu Sebentar...")
+      os.system("clear")
+      intro()
+      break
+    elif user_input.strip() == "2":
+      print("Tunggu Sebentar, Petugas akan Membantu Anda")
+      exit = input("ENTER UNTUK KELUAR >")
+      if exit == "":
+        print("Tunggu Sebentar...")
+        time.sleep(2)
+        os.system("clear")
+        intro()
+        break
+    else:
+      print("ERROR, MOHON ULANGI KEMBALI")
+      continue
+
+#subrutin untuk melihat jadwal
+def jadwal():
+  os.system("clear")
+  print("Jadwal Kereta :")
+
+  print("""
+  1. 17:30 | Argo Bromo Anggrek | 134 | Jakarta Gambir - Surabaya Pasar Turi
+  2. 18:30 | Argo Parahyangan | 30 | Jakarta Gambir - Bandung
+  3. 19:30 | Mutiara Selatan | 132 | Jakarta Gambir - Malang Kotalama
+  4. 20:30 | Malabar | 129 | Bandung - Malang Kotalama
+  5. 21:30 | Malabar | 130 | Malang Kotalama - Bandung
+
+  6. 22:30 | Tawang Jaya | 133 | Semarang Tawang - Pasar Senen
+  7. 23:30 | Senja Bengawan | 131 | Solo Jebres - Jakarta Pasar Senen
+  8. 00:30 | Jayabaya | 135 | Malang Kotalama - Jakarta Pasar Senen
+  9. 01:30 | Bengawan | 136 | Jakarta Pasar Senen - Solo Jebres
+  10. 02:30 | Argo Wilis | 137 | Surabaya Gubeng - Bandung
+
+  11. 03:30 | Pasundan | 138 | Surabaya Gubeng - Bandung Kiaracondong
+  12. 04:30 | Turangga | 139 | Surabaya Gubeng - Bandung
+  13. 05:30 | Logawa | 140 | Purwokerto - Jember
+  14. 06:30 | Gaya Baru Malam Selatan | 141 | Surabaya Gubeng - Jakarta Pasar Senen
+
+  15. 07:30 | Sawunggalih | 142 | Jakarta Pasar Senen - Kutoarjo
+  16. 08:30 | Sritanjung | 143 | Bandung - Banyuwangi
+  17. 09:30 | Kahuripan | 144 | Kiaracondong - Blitar
+  18. 10:30 | Malabar | 145 | Malang Kotalama - Bandung
+
+  19. 11:30 | Malabar | 146 | Bandung - Malang Kotalama
+  20. 12:30 | Argo Parahyangan | 147 | Bandung - Jakarta Gambir
+  21. 13:30 | Argo Bromo Anggrek | 148 | Surabaya Pasar Turi - Jakarta Gambir
+  22. 14:30 | Mutiara Selatan | 149 | Malang Kotalama - Jakarta Gambir
+
+  23. 15:30 | Tawang Jaya | 150 | Pasar Senen - Semarang Tawang
+  24. 16:30 | Senja Bengawan | 151 | Jakarta Pasar Senen - Solo Jebres
+  25. 22:30 | Jayabaya | 152 | Jakarta Pasar Senen - Malang Kotalama
+
+  26. 23:30 | Bengawan | 153 | Solo Jebres - Jakarta Pasar Senen
+  27. 00:30 | Argo Wilis | 154 | Bandung - Surabaya Gubeng
+  28. 01:30 | Pasundan | 155 | Bandung Kiaracondong - Surabaya Gubeng
+  29. 02:30 | Turangga | 156 | Bandung - Surabaya Gubeng
+
+  30. 03:30 | Logawa | 157 | Jember - Purwokerto
+  """)
+  print()
+  while True:
+    print("1. KELUAR")
+    print("2. BANTUAN")
+    user_input = input("> ")
+    if user_input.strip() == "1":
+      print("Tunggu Sebentar...")
+      os.system("clear")
+      intro()
+      break
+    elif user_input.strip() == "2":
+      print("Tunggu Sebentar, Petugas akan Membantu Anda")
+      exit = input("ENTER UNTUK KELUAR >")
+      if exit == "":
+        print("Tunggu Sebentar...")
+        time.sleep(2)
+        os.system("clear")
+        intro()
+        break
+    else:
+      print("ERROR, MOHON ULANGI KEMBALI")
+      continue
+
+#subrutin railfood
+def railfood():
+  os.system("clear")
+  print("Menu Railfood Kereta Api")
+  print("""""")
+
+#subrutin porter
+def porter():
+  os.system("clear")
+  print("Pemesanan Porter")
+  porterinput = input("Masukkan Kode Pemesanan Anda: ")
+  time.sleep(1)
+  os.system("clear")
+  print("Mencari Porter...")
+  time.sleep(3)
+  os.system("clear")
+  porterlist = ["Agus Sugus", "Dadang Sutisna", "Aul Mengaul", "Danial Ibrahim", "Maulana Zahir"]
+  porterpilihan = random.choice(porterlist)
+  print(f"Kode Pemesanan : {porterinput}")
+  print("Porter Anda: ", porterpilihan)
+  print("--------------")
+  print("TEKAN ENTER UNTUK KELUAR")
+  inpt2 = input("> ")
+  if inpt2 == "":
+    time.sleep(2)
+    os.system("clear")
+    intro()
+
+  
+#subrutin kritik dan saran
+def kritiksaran():
+  os.system("clear")
+  kersan = []
+  print("Kritik dan Saran")
+  print("Silahkan Masukkan Kritik dan Saran Untuk PT. KAI.")
+  kritik = input("> Masukkan disini \n")
+  kersan.append(kritik)
+  print()
+  print("Terimakasih atas Kritik dan Masukannya. Kami akan menerima kritik dan saran anda.")
+  print()
+  time.sleep(3)
+  os.system("clear")
+  intro()
+
+#subrutin layar awal
+def intro():
+  print("\033[31mKereta Api Indonesia 🚄\033[0m")
+  print()
+  print("Selamat Datang di Stasiun Kereta Api Bandung - DAOP 2")
+  print()
+  print()
+  
+  halo = input("Tekan Enter Untuk Melanjutkan ")
+  if halo == "":
+    while True:
+      os.system("clear")
+      print(
+          "Selamat Datang ! \n 1. Pesan Tiket \n 2. Jadwal Kereta \n 3. Rail Food \n 4. Pesan E-Porter \n 5. Kritik dan Saran \n 6. Bantuan "
+      )
+      halo = input("> ")
+      if halo.strip() == "1":
+        pesan()
+        break
+      elif halo.strip() == "2":
+        jadwal()
+        break
+      elif halo.strip() == "3":
+        print("Mohon Maaf, Fitur Ini Belum Tersedia.")
+        time.sleep(2)
+        continue
+      elif halo.strip() == "4":
+        porter()
+        break
+      elif halo.strip() == "5":
+        kritiksaran()
+        break
+      elif halo.strip() == "6":
+        print("Petugas Kamu Akan Tiba Sebentar Lagi Untuk Menolong Anda")
+        time.sleep(5)
+        os.system("clear")
+        continue
+      else:
+        print("Mohon Ulangi Input")
+        time.sleep(2)
+        continue
+
+#memulai kode
+intro()
