@@ -4,7 +4,8 @@
 
 # Kereta Api Indonesia Booking System
 
-**DISCLAIMER:** This is a simulated train ticket booking system for Kereta Api Indonesia. It is not an actual booking system, and any data input into this system will not be saved or used for real-world train ticket bookings. This is not an actual system from PT. Indonesian Railways 
+> [!IMPORTANT]
+> **DISCLAIMER:** This is a simulated train ticket booking system for Kereta Api Indonesia. It is not an actual booking system, and any data input into this system will not be saved or used for real-world train ticket bookings. This is not an actual system from PT. Indonesian Railways Company.
 
 This is a simple console-based train ticket booking system for Kereta Api Indonesia. It allows users to simulate the process of booking a train ticket, choose their departure city, destination, class, and more.
 
