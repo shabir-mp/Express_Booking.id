@@ -38,3 +38,7 @@ The code is structured into several functions that handle different features of 
 * `porter()`: A non-functional porter booking function.
 * `kritiksaran()`: Handles user feedback and suggestions.
 * `intro()`: Displays the main menu and handles user input.
+
+-----------------------------------------------------------------------------------------
+![Github Footer](https://github.com/shabir-mp/Kereta-Api-Indonesia-Booking-System/assets/133546000/c1833fe4-f470-494f-99e7-d583421625be)
+
