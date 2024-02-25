@@ -220,8 +220,61 @@ def jadwal():
 #subrutin railfood
 def railfood():
   os.system("clear")
-  print("Menu Railfood Kereta Api")
-  print("""""")
+  kode = input("Kode Pemesanan Anda/Booking Code: ")
+  time.sleep(2)
+  os.system("clear")
+  print("\033[34m🍽 Menu Railfood Kereta Api\033[0m")
+  print("""
+-Makanan/Food:
+1. Nasi Goreng Special - Rp 25.000
+2. Ayam Bakar Madu - Rp 30.000
+3. Mie Goreng Seafood - Rp 28.000
+4. Sate Padang - Rp 22.000
+5. Rawon Daging - Rp 35.000
+6. Sop Buntut - Rp 40.000
+7. Burger Rendang - Rp 18.000
+8. Martabak Telur - Rp 15.000
+9. Nasi Uduk Komplit - Rp 20.000
+10. Capcay Kuah - Rp 25.000
+11. Es Campur - Rp 15.000
+12. Pisang Goreng Keju - Rp 12.000
+13. Bubur Sumsum - Rp 10.000
+14. Roti Bakar Srikaya - Rp 8.000
+15. Pudding Coklat - Rp 12.000
+16. Kue Lapis Legit - Rp 18.000
+17. Klepon Pandan - Rp 6.000
+18. Tahu Tek - Rp 10.000
+19.Lumpia Semarang - Rp 15.000
+20. Es Teh Manis - Rp 5.000
+
+-Minuman/Drink:
+1. Kopi Tubruk - Rp 10.000
+2. Teh Tarik - Rp 8.000
+3. Es Jeruk Segar - Rp 7.000
+4. Jus Alpukat - Rp 12.000
+5. Kopi Susu Gula Aren - Rp 15.000
+6. Lassi Mangga - Rp 10.000
+7. Sirup Marjan - Rp 5.000
+18. Air Kelapa Muda - Rp 8.000
+19.Capuccino - Rp 12.000
+20. Sjora - Rp 6.000
+  """)
+  menupesanan = []
+  while True:
+   pesanan = input("Pesan/Order > ")
+   menupesanan.append(pesanan)
+   print()
+   print(menupesanan)
+   print()
+   exit = input("Tambah Pesanan/Add More ? (Y/N) ").lower().strip()
+   if exit == "y":
+     continue
+   elif exit == "n":
+     break
+  print(f"Pesanan Anda/Your Order: {menupesanan}")
+  time.sleep(5)
+  os.system("clear")
+  intro()
 
 #subrutin porter
 def porter():
