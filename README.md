@@ -45,9 +45,10 @@ The code is structured into several functions that handle different features of 
 * `intro()`: Displays the main menu and handles user input.
 
 ## Release History
-| Release Number | Version | Additional Features | Note |
-| :------: | :------: | :------: | :------: |
-| 1 | v.1.0.0 | Book train tickets, View train schedules, Railfood ordering (On Progress), Porter booking (non-functional), Submit feedback and suggestions| Latest
+| Version | Additional Features | Note |
+| :------: | :------: | :------: |
+| v.1.1.0 | The Railfood feature is now available. This feature has a function for ordering food and drinks. | Pre-Release |
+| v.1.0.0 | Book train tickets, View train schedules, Railfood ordering (On Progress), Porter booking (non-functional), Submit feedback and suggestions| Latest |
 -----------------------------------------------------------------------------------------
 ![Github Footer](https://github.com/shabir-mp/Kereta-Api-Indonesia-Booking-System/assets/133546000/c1833fe4-f470-494f-99e7-d583421625be)
 
