@@ -1,5 +1,5 @@
 <p align="center">
-<img src="https://github.com/shabir-mp/Kereta-Api-Indonesia-Booking-System/assets/133546000/56dfd058-a358-4808-aed4-b21640bf2764" width="200" />
+<img src="https://github.com/shabir-mp/Kereta-Api-Indonesia-Booking-System/assets/133546000/56dfd058-a358-4808-aed4-b21640bf2764" width="150" />
 <h1 align="center">EXPRESS_BOOKING.id</h1>
 </p>
 
