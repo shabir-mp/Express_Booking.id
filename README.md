@@ -1,3 +1,7 @@
+<p align="center">
+<img src="https://github.com/shabir-mp/Kereta-Api-Indonesia-Booking-System/assets/133546000/56dfd058-a358-4808-aed4-b21640bf2764" width="200" />
+<h1 align="center">EXPRESS_BOOKING.id</h1>
+</p>
 
 ![20240222_091022](https://github.com/shabir-mp/Kereta-Api-Indonesia-Booking-System/assets/133546000/8387d77b-17aa-400e-b3b9-0dac7e3ce9e7)
 *Images by Shabir Mahfudz Prahono*
@@ -40,6 +44,10 @@ The code is structured into several functions that handle different features of 
 * `kritiksaran()`: Handles user feedback and suggestions.
 * `intro()`: Displays the main menu and handles user input.
 
+## Release History
+| Release Number | Version | Additional Features | Note |
+| :------: | :------: | :------: | :------: |
+| 1 | v.1.0.0 | Book train tickets, View train schedules, Railfood ordering (On Progress), Porter booking (non-functional), Submit feedback and suggestions| Latest
 -----------------------------------------------------------------------------------------
 ![Github Footer](https://github.com/shabir-mp/Kereta-Api-Indonesia-Booking-System/assets/133546000/c1833fe4-f470-494f-99e7-d583421625be)
 
