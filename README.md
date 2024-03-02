@@ -47,8 +47,8 @@ The code is structured into several functions that handle different features of 
 ## Release History
 | Version | Additional Features | Note |
 | :------: | :------: | :------: |
-| v.1.1.0 | The Railfood feature is now available. This feature has a function for ordering food and drinks. | Pre-Release |
-| v.1.0.0 | Book train tickets, View train schedules, Railfood ordering (On Progress), Porter booking (non-functional), Submit feedback and suggestions| Latest |
+| v.1.1.0 | The Railfood feature is now available. This feature has a function for ordering food and drinks. | Latest |
+| v.1.0.0 | Book train tickets, View train schedules, Railfood ordering (On Progress), Porter booking (non-functional), Submit feedback and suggestions| Old Version |
 -----------------------------------------------------------------------------------------
 ![Github Footer](https://github.com/shabir-mp/Kereta-Api-Indonesia-Booking-System/assets/133546000/c1833fe4-f470-494f-99e7-d583421625be)
 
